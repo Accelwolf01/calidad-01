@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:calidad-01": "node dist/calidad-01/server/server.mjs"
+    "serve:ssr:calidad-01": "node dist/calidad-01/server/server.mjs",
+    "start:render": "npx serve dist/calidad-01/browser -s -l 10000"
   },
   "private": true,
   "dependencies": {
@@ -41,6 +42,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "serve": "^14.2.5",
     "style-loader": "^4.0.0",
     "typescript": "~5.7.2"
   }
