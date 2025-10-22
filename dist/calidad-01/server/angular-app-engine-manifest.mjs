@@ -1,6 +1,6 @@
 
 export default {
-  basePath: '/calidad-01',
+  basePath: '/',
   supportedLocales: {
   "en-US": ""
 },
