@@ -1,0 +1,82 @@
+<div class="card">
+  <div class="card-header">
+    <h2 class="mb-0"><i class="fas fa-star me-2"></i>Evalúa el Sitio Web</h2>
+  </div>
+  <div class="card-body">
+    <p class="text-muted mb-4">Tu opinión es muy importante para nosotros. Por favor, evalúa el sitio web en las siguientes métricas de calidad de software.</p>
+
+    <form *ngIf="!submitted" (ngSubmit)="submitEvaluation()">
+      <div class="mb-4">
+        <label for="name" class="form-label fw-bold">
+          <i class="fas fa-user me-2"></i>Nombre:
+        </label>
+        <input type="text" class="form-control form-control-lg" id="name" [(ngModel)]="name" name="name" placeholder="Ingresa tu nombre" required>
+      </div>
+
+      <h4 class="text-primary mb-3"><i class="fas fa-chart-bar me-2"></i>Métricas de Evaluación</h4>
+
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card border-primary">
+            <div class="card-body">
+              <label for="funcionalidad" class="form-label fw-bold">Funcionalidad (0-5)</label>
+              <p class="text-muted small">¿El sitio cumple con sus funciones principales?</p>
+              <input type="number" class="form-control" id="funcionalidad" [(ngModel)]="funcionalidad" name="funcionalidad" min="0" max="5" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-success">
+            <div class="card-body">
+              <label for="usabilidad" class="form-label fw-bold">Usabilidad (0-5)</label>
+              <p class="text-muted small">¿Es fácil de usar y navegar?</p>
+              <input type="number" class="form-control" id="usabilidad" [(ngModel)]="usabilidad" name="usabilidad" min="0" max="5" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-info">
+            <div class="card-body">
+              <label for="mantenibilidad" class="form-label fw-bold">Mantenibilidad (0-5)</label>
+              <p class="text-muted small">¿Es fácil de mantener y actualizar?</p>
+              <input type="number" class="form-control" id="mantenibilidad" [(ngModel)]="mantenibilidad" name="mantenibilidad" min="0" max="5" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-warning">
+            <div class="card-body">
+              <label for="eficiencia" class="form-label fw-bold">Eficiencia (0-5)</label>
+              <p class="text-muted small">¿Funciona de manera eficiente?</p>
+              <input type="number" class="form-control" id="eficiencia" [(ngModel)]="eficiencia" name="eficiencia" min="0" max="5" required>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card border-danger">
+            <div class="card-body">
+              <label for="portabilidad" class="form-label fw-bold">Portabilidad (0-5)</label>
+              <p class="text-muted small">¿Funciona en diferentes dispositivos?</p>
+              <input type="number" class="form-control" id="portabilidad" [(ngModel)]="portabilidad" name="portabilidad" min="0" max="5" required>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-4">
+        <button type="submit" class="btn btn-success btn-lg px-5">
+          <i class="fas fa-paper-plane me-2"></i>Enviar Evaluación
+        </button>
+      </div>
+    </form>
+
+    <div *ngIf="submitted" class="text-center">
+      <div class="alert alert-success">
+        <i class="fas fa-check-circle fa-2x text-success mb-3"></i>
+        <h4>¡Gracias por tu evaluación!</h4>
+        <p>Tu opinión nos ayuda a mejorar continuamente. Redirigiendo a resultados...</p>
+        <p class="text-muted">Evaluación enviada exitosamente al servidor.</p>
+      </div>
+    </div>
+  </div>
+</div>

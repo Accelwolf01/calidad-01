@@ -1,0 +1,20 @@
+<h2>Calculadora de Notas (Aplicación Educativa)</h2>
+<p>Esta es una aplicación simple para calcular el promedio ponderado de notas.</p>
+<div class="mb-3">
+  <label for="grade" class="form-label">Nota (0-100):</label>
+  <input type="number" class="form-control" id="grade" [(ngModel)]="newGrade" min="0" max="100">
+</div>
+<div class="mb-3">
+  <label for="weight" class="form-label">Peso:</label>
+  <input type="number" class="form-control" id="weight" [(ngModel)]="newWeight" min="0">
+</div>
+<button class="btn btn-primary" (click)="addGrade()">Agregar Nota</button>
+<ul class="list-group mt-3" *ngIf="grades.length > 0">
+  <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let grade of grades; let i = index">
+    Nota: {{ grade }}, Peso: {{ weights[i] }}
+    <button class="btn btn-danger btn-sm" (click)="removeGrade(i)">Eliminar</button>
+  </li>
+</ul>
+<div *ngIf="average !== null" class="mt-3">
+  <h4>Promedio: {{ average }}</h4>
+</div>
