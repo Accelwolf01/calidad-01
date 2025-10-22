@@ -1,16 +1,16 @@
 {
   "routes": {
-    "/calidad-01": {},
-    "/calidad-01/code": {},
-    "/calidad-01/conclusions": {},
-    "/calidad-01/evaluate": {},
-    "/calidad-01/home": {},
-    "/calidad-01/models": {},
-    "/calidad-01/norms": {},
-    "/calidad-01/quiz": {},
-    "/calidad-01/recommendations": {},
-    "/calidad-01/results": {},
-    "/calidad-01/standards": {},
-    "/calidad-01/tests": {}
+    "/": {},
+    "/code": {},
+    "/conclusions": {},
+    "/evaluate": {},
+    "/home": {},
+    "/models": {},
+    "/norms": {},
+    "/quiz": {},
+    "/recommendations": {},
+    "/results": {},
+    "/standards": {},
+    "/tests": {}
   }
 }
